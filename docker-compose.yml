@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: "./dev/Wordle Game/backend"
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - FLASK_ENV=production
+      - SECRET_KEY=wordle-super-secret-jwt-key-2026-secure-token
+    volumes:
+      - ./dev/Wordle Game/backend/data:/app/data
+
+  frontend:
+    build:
+      context: "./dev/Wordle Game/frontend"
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend

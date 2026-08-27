@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  --color-correct: #22c55e;
+  --color-present: #eab308;
+  --color-absent: #4b5563;
+  --color-tile-border: #374151;
+  --color-tile-bg: #111827;
+}
+
+.high-contrast {
+  --color-correct: #ea580c; /* High-contrast Orange */
+  --color-present: #0284c7; /* High-contrast Sky Blue */
+  --color-absent: #4b5563;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  overflow-x: hidden;
+  background-color: #0f172a;
+  color: #f8fafc;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+/* 3D Tile Flip Animation */
+@keyframes tileFlip {
+  0% {
+    transform: rotateX(0deg);
+    border-color: #475569;
+  }
+  45% {
+    transform: rotateX(90deg);
+    border-color: #475569;
+  }
+  55% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.tile-flip {
+  animation: tileFlip 0.55s ease-in-out forwards;
+}
+
+/* Pop-in Letter Bounce Animation */
+@keyframes popIn {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.tile-pop {
+  animation: popIn 0.12s ease-in-out;
+}
+
+/* Row Shake on Invalid Input or Hard Mode Error */
+@keyframes shakeRow {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.row-shake {
+  animation: shakeRow 0.4s ease-in-out;
+}
+
+/* Winning Dance Bounce */
+@keyframes winDance {
+  0%, 100% { transform: translateY(0); }
+  20% { transform: translateY(-24px); }
+  40% { transform: translateY(4px); }
+  60% { transform: translateY(-12px); }
+  80% { transform: translateY(0); }
+}
+
+.win-bounce-0 { animation: winDance 0.7s ease-in-out 0.0s; }
+.win-bounce-1 { animation: winDance 0.7s ease-in-out 0.1s; }
+.win-bounce-2 { animation: winDance 0.7s ease-in-out 0.2s; }
+.win-bounce-3 { animation: winDance 0.7s ease-in-out 0.3s; }
+.win-bounce-4 { animation: winDance 0.7s ease-in-out 0.4s; }
+.win-bounce-5 { animation: winDance 0.7s ease-in-out 0.5s; }
+
+/* Glowing pulse for AI Hints drawer */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 15px rgba(34, 197, 94, 0.3); }
+  50% { box-shadow: 0 0 25px rgba(34, 197, 94, 0.7); }
+}
+
+.pulse-ai {
+  animation: glowPulse 2s infinite ease-in-out;
+}
+
+/* Glassmorphism card styles */
+.glass-panel {
+  background: rgba(30, 41, 59, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.light .glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}

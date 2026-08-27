@@ -1,0 +1,22 @@
+# Python virtual environments & bytecode
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.db
+instance/
+
+# Node & JS artifacts
+node_modules/
+package-lock.json
+
+# Environment variables
+.env
+
+# Elastic Beanstalk
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
