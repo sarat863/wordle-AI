@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🌟 Wordle AI: Multi-Paradigm Puzzle Platform & Intelligent Solver Engine
+# 🌟 Wordle AI: Enterprise Multi-Paradigm Puzzle Engine & Intelligent Solver Platform
 
-**Engineered by [Sai Sarat Chandra](https://github.com/sarat863)**
+**Architected & Developed by [Sai Sarat Chandra](https://github.com/sarat863)**
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg?logo=python&logoColor=white)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-3.0%2B-000000.svg?logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
@@ -13,32 +13,147 @@
 [![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED.svg?logo=docker&logoColor=white)](https://docker.com)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-*An enterprise-grade, full-stack Wordle ecosystem featuring mathematical solver algorithms (**Shannon Information Theory & Minimax**), Multi-Grid solving (**Dordle & Quordle**), a Chess.com-style **AI Move-by-Move Accuracy Reviewer**, a live **Bot vs Bot Tournament Arena**, and an **XP/Achievement Leveling System**.*
+*A full-stack, multi-paradigm Wordle ecosystem featuring mathematical solver engines (**Shannon Information Theory & Minimax**), Multi-Grid puzzle solving (**Dordle & Quordle**), a Chess.com-style **AI Move-by-Move Accuracy Reviewer**, a live **Bot vs Bot Tournament Arena**, and an **XP/Achievement Leveling System**.*
 
 ---
 
-[🚀 Quick Start](#-quick-start-guide) • [🧠 Mathematical AI Solver](#-mathematical-formulation-of-the-ai-solver) • [🎮 Features](#-key-features) • [🏛️ Architecture](#-system-architecture) • [📡 API Reference](#-restful-api-reference) • [🧪 Testing](#-automated-testing-suite) • [👨‍💻 Author](#-author--contact)
+[🚀 Quick Start](#-quick-start-guide) • [🎮 Game Modes & Puzzles](#-game-modes--puzzles-catalog) • [🧠 Mathematical AI Solvers](#-mathematical-formulation-of-the-ai-solvers) • [🏛️ System Architecture](#-system-architecture) • [📡 RESTful API Reference](#-restful-api-reference) • [🧪 Testing](#-automated-testing-suite) • [📘 Detailed Manuals](#-detailed-documentation-links) • [👨‍💻 Author](#-author--contact)
 
 ---
 
 </div>
 
-## 📸 Key Features
+## 📸 Key Features At A Glance
 
-| Feature | Description |
+| Category | Highlight Features |
 | :--- | :--- |
-| 🧠 **Shannon Entropy AI Solver** | Real-time calculation of expected information gain ($E[I] = \sum P(p) \log_2 \frac{1}{P(p)}$) to rank mathematically optimal guesses. |
-| 🛡️ **Minimax Solver Algorithm** | Calculates worst-case remaining candidate pool ($\min_g \max_p \|\mathcal{W}_{g,p}\|$) to guarantee minimal risk. |
-| 💎 **AI Game Review (Chess.com Style)** | Post-game move quality classification: **Brilliant (💎)**, **Great (🟢)**, **Good (🔵)**, **Inaccuracy (🟡)**, **Mistake (🟠)**, **Blunder (🔴)** with overall accuracy %. |
-| 👥 **Multi-Grid Wordle (Dordle & Quordle)** | Play 2 simultaneous boards (Dordle, 7 attempts) or 4 simultaneous boards (Quordle, 9 attempts) with linked typing and independent status. |
-| ⚔️ **Bot vs Bot Tournament Arena** | Live head-to-head simulation benchmarking Shannon Entropy vs. Minimax vs. Letter Frequency vs. Random baseline algorithms. |
-| 🎖️ **XP & Achievement Leveling** | Level progression ($\text{Level} = \lfloor \sqrt{\text{XP}/50} \rfloor + 1$), player titles (*Novice Puzzler* to *Grandmaster*), and unlockable badges. |
-| 📅 **Daily & Speed Run Modes** | Date-seeded universal daily puzzle and high-stakes 3-minute timed countdown sprints. |
-| 🔤 **Variable Word Lengths** | Dynamic switching across 4-letter mini, 5-letter classic, and 6-letter master boards. |
-| 🔗 **Multiplayer Friend Challenges** | Encrypted URL tokens to create and share custom secret word challenges with friends. |
-| 📖 **Vocabulary Dictionary Inspector** | In-game phonetics, parts of speech, definitions, and usage examples via Merriam-Webster & Free Dictionary API integration. |
-| 🔊 **Web Audio Synthesizer** | Native Web Audio API sound generator for keypresses, musical tile reveal chords, error buzzers, and celebratory fanfares. |
-| 🎨 **Accessibility & Themes** | Midnight Dark, Studio Light, and High-Contrast Colorblind Mode (Orange / Sky Blue). |
+| 🧩 **Puzzle Paradigms** | **Classic Practice (5L)**, **Daily Challenge**, **Dordle (2 Boards)**, **Quordle (4 Boards)**, **Speed Run (3-Min)**, **4-Letter Mini**, **6-Letter Master**, and **Custom Friend Challenges**. |
+| 🧠 **AI Intelligence** | **Shannon Information Entropy Solver** ($E[I]$ bits), **Minimax Worst-Case Pruning**, Tiered Character Hints, and Positional Frequency Heuristics. |
+| 💎 **Game Analytics** | **Chess.com-Style Move-by-Move Review**: Classifies every turn as *Brilliant 💎*, *Great 🟢*, *Good 🔵*, *Inaccuracy 🟡*, *Mistake 🟠*, or *Blunder 🔴* with candidate elimination curves ($2,315 \to 46 \to 3 \to 1$). |
+| ⚔️ **AI Battle Arena** | Head-to-head live benchmarking across 4 algorithms: Shannon Entropy Bot vs. Minimax Bot vs. Letter Frequency Bot vs. Random Baseline. |
+| 🎖️ **Gamification** | Leveling progression ($\text{Level} = \lfloor \sqrt{\text{XP}/50} \rfloor + 1$), dynamic player titles (*Novice Puzzler* to *Grandmaster*), and 8 unlockable achievement badges. |
+| 📖 **Lexical Tools** | In-game vocabulary inspector with phonetics, part of speech, definitions, and real-world example sentences. |
+| 🔊 **Audio & A11y** | Zero-asset **Web Audio API synthesizer** (dynamic clicks, chords, chimes, and fanfares) & **Colorblind Mode** (Orange/Sky Blue). |
+
+---
+
+## 🎮 Game Modes & Puzzles Catalog
+
+*For full deep-dives, wireframes, and strategic breakdowns, see [GAME_MODES.md](GAME_MODES.md).*
+
+### 1. ♾️ Classic Practice Mode (5 Letters)
+The definitive Wordle experience. Guess the hidden 5-letter word in **6 attempts** with real-time color feedback (🟩 Green = Correct, 🟨 Yellow = Present, ⬛ Gray = Absent) and strict duplicate letter evaluation.
+
+### 2. 👥 Dordle: 2-Board Simultaneous Solving
+Solve **two independent secret words simultaneously** within **7 attempts**. Your guesses feed into both grids concurrently. When one board is solved, it locks as `won`, while the second board remains active.
+
+```text
+┌─────────────────────────────────────────────────────────────┐
+│  [W] Wordle AI          [👥 Dordle (2 Boards) ▼]      [AI]   │
+├─────────────────────────────────────────────────────────────┤
+│       BOARD 1 (Solved in 3)           BOARD 2 (In Progress) │
+│     ┌───────────────────────┐       ┌─────────────────────┐ │
+│     │ [ C ][ R ][ A ][ N ][E]│       │ [ C ][ R ][ A ][N][E]│ │
+│     │ [ T ][ R ][ A ][ C ][E]│       │ [ S ][ P ][ O ][K][E]│ │
+│     │ [ G ][ R ][ A ][ P ][E]│ (✅)  │ [ F ][ L ][ A ][M][E]│ │
+│     │                       │       │ [ _ ][ _ ][ _ ][_][_]│ │
+│     └───────────────────────┘       └─────────────────────┘ │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### 3. 👑 Quordle: 4-Board Simultaneous Solving
+The ultimate multitasking puzzle. Solve **four distinct secret words simultaneously** within **9 attempts** across 4 quadrants.
+
+### 4. ⚡ Speed Run Mode (3-Minute Sprint)
+Race against an active **180-second ticking clock**. Score points proportionally to your remaining time, with penalties if the timer reaches zero.
+
+### 5. 4️⃣ 4-Letter Mini & 6️⃣ 6-Letter Master Modes
+- **4-Letter Mini**: Fast, compact $6 \times 4$ puzzle layout (~1,800 candidates).
+- **6-Letter Master**: Combinatorial challenge with $6 \times 6$ layout (~4,500 candidates) requiring deep vocabulary prefixes/suffixes.
+
+### 6. 📅 Daily Challenge Mode
+Universal, date-seeded puzzle synchronized globally for all players each day using cryptographic hash modulo selection.
+
+### 7. 🔗 Custom Multiplayer Friend Challenges
+Create your own hidden secret word challenge, generate an encrypted shareable URL token (`/game?token=...`), and challenge friends to solve it.
+
+---
+
+## 💎 Chess.com-Style Move-by-Move AI Game Review
+
+Click **"View AI Move-by-Move Review 💎"** after any game to view a comprehensive post-match analytics breakdown:
+
+```text
+┌─────────────────────────────────────────────────────────────┐
+│ 🧠 AI MOVE-BY-MOVE GAME REVIEW                          [✕] │
+├─────────────────────────────────────────────────────────────┤
+│  VOCABULARY PERFORMANCE                                     │
+│  Grandmaster Accuracy                                94.2%  │
+│  Secret Word: CRANE in 3 turns                      ACCURACY│
+├─────────────────────────────────────────────────────────────┤
+│  [ 💎 1 Brilliant ] [ 🟢 1 Great ] [ 🔵 1 Good ] [ 🔴 0 ]   │
+├─────────────────────────────────────────────────────────────┤
+│  #1 TRACE   [ 💎 Brilliant ]                                │
+│     Optimal entropy opening play! Eliminated 98% space.     │
+│     Candidates: 2,315 → 46 | Eliminated: 98.0% | Optimal: TRACE│
+├─────────────────────────────────────────────────────────────┤
+│  #2 SLATE   [ 🟢 Great ]                                    │
+│     High information yield move. Pruned candidates to 2.    │
+│     Candidates: 46 → 2 | Eliminated: 95.6% | Optimal: CRANE │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## ⚔️ AI Bot vs Bot Tournament Arena
+
+Benchmark 4 distinct algorithms head-to-head on any custom or random secret word with real-time compute telemetry:
+
+```mermaid
+graph LR
+    Input[Secret Word: CRANE] --> EntropyBot[Shannon Entropy Bot 🧠]
+    Input --> MinimaxBot[Minimax Bot 🛡️]
+    Input --> FreqBot[Letter Frequency Bot ⚡]
+    Input --> RandomBot[Random Baseline Bot 🎲]
+
+    EntropyBot --> Standings[🏆 Tournament Leaderboard]
+    MinimaxBot --> Standings
+    FreqBot --> Standings
+    RandomBot --> Standings
+```
+
+- **Shannon Entropy Bot 🧠**: Maximizes expected information gain per turn.
+- **Minimax Bot 🛡️**: Minimizes worst-case remaining candidate pool.
+- **Letter Frequency Bot ⚡**: Rapid positional distribution scoring.
+- **Random Baseline Bot 🎲**: Stochastic baseline model.
+
+---
+
+## 🧠 Mathematical Formulation of the AI Solvers
+
+### 1. Shannon Information Entropy ($E[I]$)
+
+Given a guess $g$, the current candidate set $\mathcal{W}$, and the 243 possible feedback patterns $\mathcal{P} = \{0, 1, 2\}^5$:
+
+$$P(p \mid g) = \frac{|\{w \in \mathcal{W} : \text{evaluate}(g, w) = p\}|}{|\mathcal{W}|}$$
+
+The **Expected Information Gain (Entropy in bits)** is computed as:
+
+$$E[I(g)] = \sum_{p \in \mathcal{P}} P(p \mid g) \cdot \log_2\left(\frac{1}{P(p \mid g)}\right)$$
+
+The optimal guess maximizes expected information:
+
+$$g^*_{\text{entropy}} = \arg\max_{g \in \mathcal{V}} E[I(g)]$$
+
+---
+
+### 2. Minimax Worst-Case Pruning
+
+The Minimax strategy minimizes the maximum possible remaining candidate pool size:
+
+$$\text{WorstCase}(g) = \max_{p \in \mathcal{P}} |\{w \in \mathcal{W} : \text{evaluate}(g, w) = p\}|$$
+
+$$g^*_{\text{minimax}} = \arg\min_{g \in \mathcal{V}} \text{WorstCase}(g)$$
 
 ---
 
@@ -46,7 +161,7 @@
 
 ```mermaid
 graph TD
-    subgraph ClientLayer [Frontend: React 18 + Vite + TailwindCSS]
+    subgraph ClientLayer [Frontend: React 18 + Vite 5 + TailwindCSS 3]
         UI[Interactive Board & Responsive QWERTY Keyboard]
         MultiGridUI[Multi-Grid Layout: Dordle & Quordle]
         SolverDrawer[AI Solver & Hints Drawer]
@@ -99,36 +214,6 @@ graph TD
 
 ---
 
-## 🧠 Mathematical Formulation of the AI Solver
-
-The AI Solver is formulated on principles of **Information Theory (Shannon Entropy)** and **Minimax Decision Theory**.
-
-### 1. Shannon Information Entropy ($E[I]$)
-
-Given:
-- A candidate guess $g$
-- The set of remaining possible target words $\mathcal{W}$
-- The set of Wordle feedback patterns $\mathcal{P} = \{0, 1, 2\}^L$ (where $0 = \text{absent}$, $1 = \text{present}$, $2 = \text{correct}$)
-
-The probability $P(p)$ of receiving pattern $p$ when guessing $g$ is:
-$$P(p) = \frac{|\{w \in \mathcal{W} : \text{evaluate}(g, w) = p\}|}{|\mathcal{W}|}$$
-
-The **Expected Information Gain (Entropy in bits)** is computed as:
-$$E[I(g)] = \sum_{p \in \mathcal{P}} P(p) \cdot \log_2\left(\frac{1}{P(p)}\right)$$
-
-The optimal guess maximizes expected information:
-$$g^*_{\text{entropy}} = \arg\max_{g \in \mathcal{V}} E[I(g)]$$
-
----
-
-### 2. Minimax Worst-Case Pruning
-
-The Minimax strategy minimizes the maximum possible remaining candidate pool size:
-$$\text{WorstCase}(g) = \max_{p \in \mathcal{P}} |\{w \in \mathcal{W} : \text{evaluate}(g, w) = p\}|$$
-$$g^*_{\text{minimax}} = \arg\min_{g \in \mathcal{V}} \text{WorstCase}(g)$$
-
----
-
 ## 📡 RESTful API Reference
 
 | Endpoint | Method | Description | Auth |
@@ -175,7 +260,7 @@ pip install -r requirements.txt
 # Start backend server
 python app.py
 ```
-*Backend API will run at `http://127.0.0.1:5001` with automatic SQLite schema initialization.*
+*Backend API will run on `http://127.0.0.1:5001`.*
 
 #### 2. Frontend Web App Setup
 ```bash
@@ -194,12 +279,10 @@ npm run dev
 
 ### Option B: Docker One-Click Deployment
 
-Deploy both the backend and frontend in containerized environments:
-
 ```bash
 docker compose up --build
 ```
-- **Frontend**: `http://localhost:3000`
+- **Frontend App**: `http://localhost:3000`
 - **Backend API**: `http://localhost:5001`
 
 ---
@@ -219,10 +302,10 @@ collected 20 items
 
 tests/test_advanced_features.py::test_minimax_solver PASSED              [  5%]
 tests/test_advanced_features.py::test_game_analyzer PASSED               [ 10%]
-tests/test_advanced_features.py::test_multi_grid_dordle PASSED           [ 15%]
-tests/test_advanced_features.py::test_ai_battle_simulation PASSED        [ 20%]
-tests/test_advanced_features.py::test_achievement_service PASSED         [ 25%]
-tests/test_advanced_features.py::test_advanced_api_endpoints PASSED      [ 30%]
+tests/test_multi_grid_dordle PASSED                                      [ 15%]
+tests/test_ai_battle_simulation PASSED                                   [ 20%]
+tests/test_achievement_service PASSED                                    [ 25%]
+tests/test_advanced_api_endpoints PASSED                                 [ 30%]
 tests/test_ai_solver.py::test_filter_candidates PASSED                   [ 35%]
 tests/test_ai_solver.py::test_entropy_calculation PASSED                 [ 40%]
 tests/test_ai_solver.py::test_top_recommendations PASSED                 [ 45%]
@@ -231,7 +314,7 @@ tests/test_api_endpoints.py::test_health_check PASSED                    [ 55%]
 tests/test_api_endpoints.py::test_auth_registration_and_login PASSED     [ 60%]
 tests/test_api_endpoints.py::test_game_flow_and_guess PASSED             [ 65%]
 tests/test_api_endpoints.py::test_leaderboard_endpoint PASSED            [ 70%]
-tests/test_api_endpoints.py::test_solver_recommend_endpoint PASSED       [ 75%]
+tests/test_solver_recommend_endpoint PASSED                               [ 75%]
 tests/test_wordle_engine.py::test_exact_match PASSED                     [ 80%]
 tests/test_wordle_engine.py::test_all_absent PASSED                      [ 85%]
 tests/test_wordle_engine.py::test_duplicate_letter_handling_target_single PASSED [ 90%]
@@ -241,11 +324,12 @@ tests/test_wordle_engine.py::test_hard_mode_validation PASSED            [100%]
 ============================== 20 passed in 4.91s ==============================
 ```
 
-### Frontend Production Build
-```bash
-cd "dev/Wordle Game/frontend"
-npm run build
-```
+---
+
+## 📘 Detailed Documentation Links
+
+- **[GAME_MODES.md](GAME_MODES.md)**: Exhaustive manual detailing every puzzle mode, rules, wireframes, and gameplay strategies.
+- **[DOCUMENTATION.md](DOCUMENTATION.md)**: Complete 8-section technical architecture, mathematical formulations, database schemas, and system specifications.
 
 ---
 
